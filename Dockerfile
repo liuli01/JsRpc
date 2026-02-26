@@ -3,8 +3,7 @@ FROM golang:1.16 AS builder
 
 # 修复：Go 1.16 中 GO111MODULE 默认是 auto，显式设为 on 更稳妥
 # 补充：增加时区、镜像加速等配置，避免依赖下载失败
-ENV GOPROXY="https://goproxy.cn,direct" \
-    GO111MODULE="on" \
+ENV GO111MODULE="on" \
     CGO_ENABLED="0" \
     GOOS="linux" \
     GOARCH="amd64" \
