@@ -1,7 +1,6 @@
 FROM golang:1.16 as builder
 # Setting environment variables
-ENV GOPROXY="https://goproxy.cn,direct" \
-    GO111MODULE="on" \
+ENV GO111MODULE="on" \
     CGO_ENABLED="0" \
     GOOS="linux" \
     GOARCH="amd64"
